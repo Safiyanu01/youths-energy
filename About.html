@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./aboutstyle.css" />
+    <title>ABOUT US</title>
+  </head>
+  <body>
+    <div class="nav--container">
+      <img class="logo" src="./IMAGES/logo1.jpg" alt="YEOA logo" />
+
+      <ul class="nav">
+        <li><a href="./Home.html">Home</a></li>
+        <li><a href="./About.html">About Us</a></li>
+        <li><a href="http://">Donate</a></li>
+        <li><a href="./Register.html">Register</a></li>
+        <li><a href="http://">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img class="image" src="./IMAGES/family.jpg" />
+        <div class="text">Clean Water and Sanitation</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img class="image" src="./IMAGES/village.jpg" />
+        <div class="text">Parte With The Orphans</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img class="image" src="./IMAGES/Header1.jpg" />
+        <div class="text">Save a life Project</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <h2>ABOUT US</h2>
+    <p>
+      Youths Energy Organization is a non-profit Humanitarian organization
+      located in Nigeria, West Africa with the primary aim of helping community
+      development in Africa. Our stronghold is to combat poverty and help
+      disadvantaged people living in deplorable conditions in Africa live a
+      better life with access to basic amenities.
+    </p>
+    <p>
+      We have designed a model that is focused on alleviating poverty and
+      improving quality of life. Our team will invest energy, time, skills, and
+      resources to deliver both community and humanitarian projects to empower
+      people and create change. Our strategy is unique and next to none in
+      bringing People, Partners, and Resources together to develop a
+      long-lasting positive change in Africa. Being a non-profit organization,
+      we rely on donations to create sufficient opportunities for our volunteers
+      needed to fulfill the desires and needs of communities in need. We assist
+      the local craftsmen, fabric artists, and jewelry makers to sustain
+      themselves and their families.
+    </p>
+    <p>
+      Youths Energy Organization understands the challenges of single teenage
+      mothers and supports them in selling their crafts to raise funds. We also
+      focus on transforming agricultural conditions as well. To do so, we assist
+      farmers in increasing their harvest and selling the produce in thriving
+      markets. With consistent support and direct links to markets, we ensure
+      these people get resources to lift themselves out of poor living
+      conditions.
+    </p>
+    <p>
+      We are a non-profit organization which strives to improve the quality of
+      life of people living in African rural communities. We address the needs
+      and necessities of the needy to build healthy, sustainable and productive
+      solutions for them through clean water, nutrition, agriculture and sports.
+      Our mission is rebuilding life of the poors with dignity.
+    </p>
+    <p>
+      We believe in promoting the realization of equality for poor people to
+      facilitate their significant inclusion in all aspects of life. To achieve
+      this, we welcome everyone interested in joining hands with us in carving a
+      prosperous and fortunate world for communities living below the poverty
+      line. Our vision is to make Africa a country where every needy enjoys
+      equal access to the necessities and can achieve their full potential.
+    </p>
+    <div class="buttom"></div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
